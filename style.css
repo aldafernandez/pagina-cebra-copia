@@ -1,1 +1,77 @@
-"creo css" 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 6fr 2fr;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+
+p{
+    padding: .5rem;
+    color: #eee;
+    background-color: rgba(52, 131, 250, 0.9);
+    text-align: center;
+}
+.navegador{
+    display: flex;
+    flex-direction: row;
+    background-color: #3483fa;
+    justify-content: space-between;
+    width: 100%;
+    & .nav-buscador{
+        display: flex;
+        padding-top: .5rem;
+        gap: 1.75rem;
+        
+        & .menu-burger-icono{
+           width: 35px;
+           filter: invert(100%);
+           padding-top: 2rem;
+        }
+        & .logo-cebra{
+            width: 200px;
+            
+        }
+        & .nav-desplegable{
+            display: flex;
+            padding-top: 2rem;
+            & li{
+                color: #eee;
+                padding: 1.4rem;
+                font-weight: bold;
+                font-size: 13px;
+            }
+        }  
+    }
+    & .busqueda{
+        display: flex;
+        padding-right: 2rem;
+        
+        gap: 2.5rem;
+        & .input{
+            height: 30px;
+            width: 200px;
+            border-radius: .5rem;
+        }
+        & .iconos{
+            width: 35px;
+        }
+    }
+}
+
