@@ -76,20 +76,62 @@ footer{grid-area: footer;}
     }   
 }
 
-.foto-slider{
+.slider{
     width: 100%;
-    height: 300px;
-    position: absolute;
-}
-.flecha-izquierda{
-    position: relative;
-    width: 40px;
-    top:110px
+    height:auto;
+    overflow: hidden;
+    & ul{
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: slide 16s infinite alternate;
+        & li{
+            width: 100%;
+            & img{
+                width: 100%;
+                height: 450px;
+            }
+        }
     }
-.flecha-derecha{
-    position: relative;
-    width: 51px;
-    top:115px;
-    left:1253px
+}
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
 }
 
+.subtitle{
+    color: #3483fa;
+    text-align: center;
+    padding: 2rem;
+    font-size: 25px;
+}
+.section-edades{
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  & .div-edades{
+    width: 290px;
+    height: 400px;
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+    & p{
+       background-color: #3483fa;
+       color: #eee;
+       text-align: center;
+       font-weight: bold;
+    }
+  }
+}
