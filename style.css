@@ -51,18 +51,36 @@ body{
         } 
         & .busqueda{
             display: flex;
-            padding-top: 3rem;
-            gap: 1.5rem;
+            gap:1rem;
+            padding-top: 2.5rem;
+           & .input-sector{
+            height: 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: .5rem;
+            & .icon{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 12px;
+            }
             & .input{
-                height: 30px;
-                width: 200px;
-                border-radius: .5rem;
+              border: 1px solid #ccc;
+              background-color: transparent;
+              border-radius: 5px;
+              font-size: 1rem;
+              padding-inline: 2rem;
             }
-            & .iconos{
-                width: 35px;
-            }
+            & .input::placeholder{ color: #ccc;}
+           }
+           & .iconos{
+            width: 30px;
+            margin-top: .5rem;
+           }
         } 
-    }   
+    }
 }
 
 .slider{
