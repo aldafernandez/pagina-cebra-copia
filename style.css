@@ -160,17 +160,23 @@ body{
     width: 100%;
     height: auto;
     display: flex;
-    margin-left: 3rem;
     gap: 1rem;
     justify-content: center;
     padding: 1.5rem;
-    position:absolute;
+    position: relative;
     & .products-card{
         width: 250px;
+        height: 450px;
         background-color:white;
         overflow: hidden;
         border-radius: 10px;
         border: 1px solid rgb(141, 139, 139);
+        & .product-img {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            display: flex;
+        }
         & img{
             width: 100%;
             height: 300px;
@@ -189,15 +195,15 @@ body{
         }
     }
     & .flecha-left{
-        position: relative;
-        top: 150px;
-        right: 1130px;
+        position: absolute;
+        top: 230px;
+        right: 1230px;
         width: 30px;
     }
     & .flecha-rigth{
-        position: relative;
-        top: 150px;
-        right: 58px;
+        position: absolute;
+        top: 230px;
+        right: 83px;
     }
 
 }
